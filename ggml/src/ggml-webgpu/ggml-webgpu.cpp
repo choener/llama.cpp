@@ -501,7 +501,8 @@ static void ggml_backend_webgpu_check_wait_status(wgpu::WaitStatus wait_status,
 
 // TODO: these next two functions may want tuning across different platforms and workloads,
 static uint32_t ggml_backend_webgpu_get_max_inflight_batches() {
-    return UINT32_MAX;
+    return 4;
+    // return UINT32_MAX;
 }
 
 static uint32_t ggml_backend_webgpu_get_command_submit_batch_size() {
